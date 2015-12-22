@@ -1,7 +1,7 @@
 #ifndef __WINDOW_H
 #define __WINDOW_H
 
-#include "core.h"
+#include "engine.h"
 
 namespace engine {
 
@@ -16,8 +16,8 @@ namespace engine {
         int m_running;
         GLFWwindow* m_window;
 
-        bool m_buttons_down[CORE_MAX_BUTTONS];
-        bool m_keys_down[CORE_MAX_KEYS];
+        bool m_buttons_down[ENGINE_MAX_BUTTONS];
+        bool m_keys_down[ENGINE_MAX_KEYS];
         double mouse_x;
         double mouse_y;
       private:

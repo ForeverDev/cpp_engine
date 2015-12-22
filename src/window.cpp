@@ -9,10 +9,10 @@ namespace engine {
       m_width = width;
       m_height = height;
       m_running = true;
-      for (int i = 0; i < CORE_MAX_KEYS; i++) {
+      for (int i = 0; i < ENGINE_MAX_KEYS; i++) {
         m_keys_down[i] = false;
       }
-      for (int i = 0; i < CORE_MAX_BUTTONS; i++) {
+      for (int i = 0; i < ENGINE_MAX_BUTTONS; i++) {
         m_buttons_down[i] = false;
       }
       if (!init()) {
@@ -41,14 +41,14 @@ namespace engine {
     }
 
     bool Window::isKeyDown(unsigned int keycode) const {
-      if (keycode >= CORE_MAX_KEYS) {
+      if (keycode >= ENGINE_MAX_KEYS) {
         return false;
       }
       return m_keys_down[keycode];
     }
 
     bool Window::isMouseButtonDown(unsigned int keycode) const {
-      if (keycode >= CORE_MAX_BUTTONS) {
+      if (keycode >= ENGINE_MAX_BUTTONS) {
         return false;
       }
       return m_buttons_down[keycode];
