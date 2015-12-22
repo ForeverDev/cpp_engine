@@ -1,7 +1,7 @@
 #ifndef __VECTOR2_H
 #define __VECTOR2_H
 
-#include "engine.h"
+#include "core.h"
 
 namespace engine {
 

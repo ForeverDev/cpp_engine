@@ -1,7 +1,7 @@
 #ifndef __WINDOW_H
 #define __WINDOW_H
 
-#include "engine.h"
+#include "core.h"
 
 namespace engine {
 
