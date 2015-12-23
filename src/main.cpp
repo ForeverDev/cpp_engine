@@ -8,7 +8,7 @@ int main(int argc, char* argv[]) {
 
   Mat4 position = Mat4::translation(Vec3(2, 3, 4));
   position.printComponents();
-  position *= Mat4::identity();
+  std::cout << position.cols[3] << std::endl;
 
   Window window("Testing window", 800, 600);
   glClearColor(0.2, 0.3, 0.8, 1);

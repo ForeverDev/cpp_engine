@@ -9,7 +9,7 @@ namespace engine {
     }
 
     Mat4::Mat4(float diagonal) {
-      std::memset(elements, 0, sizeof(elements));
+      Mat4();
       elements[0 + 0 * 4] = diagonal;
       elements[1 + 1 * 4] = diagonal;
       elements[2 + 2 * 4] = diagonal;

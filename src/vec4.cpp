@@ -4,23 +4,14 @@ namespace engine {
 
   namespace math {
 
-    /*
-    Vec4::Vec4() {
-      x = 0;
-      y = 0;
-      z = 0;
-      w = 0;
-    }
-    */
-
-    Vec4::Vec4(double x, double y, double z, double w) {
+    Vec4::Vec4(float x, float y, float z, float w) {
       this->x = x;
       this->y = y;
       this->z = z;
       this->w = w;
     }
 
-    double Vec4::magnitude() const {
+    float Vec4::magnitude() const {
       return sqrt(x*x + y*y + z*z + w*w);
     }
 
@@ -65,7 +56,7 @@ namespace engine {
       return *this;
     }
 
-    Vec4& Vec4::operator*=(double other) {
+    Vec4& Vec4::operator*=(float other) {
       *this = *this * other;
       return *this;
     }
@@ -89,7 +80,7 @@ namespace engine {
       return Vec4(left.x * right.x, left.y * right.y, left.z * right.z, left.w * right.w);
     }
 
-    Vec4 operator*(const Vec4& left, double right) {
+    Vec4 operator*(const Vec4& left, float right) {
       return Vec4(left.x * right, left.y * right, left.z * right, left.w * right);
     }
 

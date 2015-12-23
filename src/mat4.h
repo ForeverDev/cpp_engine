@@ -16,9 +16,7 @@ namespace engine {
       public:
         union {
           float elements[16];
-          struct {
-            Vec4 cols[4];
-          };
+          Vec4 cols[4];
         };
 
         Mat4();

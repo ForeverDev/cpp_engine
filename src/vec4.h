@@ -13,15 +13,15 @@ namespace engine {
       friend Vec4 operator+(const Vec4& left, const Vec4& right);
       friend Vec4 operator-(const Vec4& left, const Vec4& right);
       friend Vec4 operator*(const Vec4& left, const Vec4& right);
-      friend Vec4 operator*(const Vec4& left, double right);
+      friend Vec4 operator*(const Vec4& left, float right);
       friend Vec4 operator/(const Vec4& left, const Vec4& right);
 
       public:
-        double x, y, z, w;
+        float x, y, z, w;
 
         Vec4() = default;
-        Vec4(double x, double y, double z, double w);
-        double magnitude() const;
+        Vec4(float x, float y, float z, float w);
+        float magnitude() const;
 
         bool operator==(const Vec4& other) const;
         bool operator!=(const Vec4& other) const;
@@ -32,7 +32,7 @@ namespace engine {
         Vec4& operator+=(const Vec4& other);
         Vec4& operator-=(const Vec4& other);
         Vec4& operator*=(const Vec4& other);
-        Vec4& operator*=(double other);
+        Vec4& operator*=(float other);
         Vec4& operator/=(const Vec4& other);
 
     };
